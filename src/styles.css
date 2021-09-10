@@ -8,30 +8,42 @@
 body {
   min-height: 100vh;
   font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  justify-content: center;
+
   padding-top: 10vh;
+
+  color: #333;
 }
 
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  color: #333;
+.container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .msg-sucess {
   background-color: #28a745;
+  max-width: 100px !important;
   color: #fff;
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 40px;
+  right: 0px;
 }
 
 .msg-error {
   background-color: rgb(227, 94, 107);
   color: #fff;
 }
+
+/* .mat-simple-snackbar {
+  display: flex;
+  font-size: 1rem !important;
+  min-height: 20px !important;
+  max-width: 100% !important;
+  width: 250px !important;
+  align-items: center !important;
+  justify-content: center !important;
+} */

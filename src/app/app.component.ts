@@ -52,11 +52,13 @@ export class AppComponent {
   markAsDone(todo: Todo) {
     todo.done = true;
     this.save();
+    this.appService.showMessage('Tarefa concluida!', false);
   }
 
   markAsUndone(todo: Todo) {
     todo.done = false;
     this.save();
+    this.appService.showMessage('Tarefa desfeita!', false);
   }
 
   save() {

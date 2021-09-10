@@ -1,42 +1,44 @@
-<div class="logo">
-  <img src="../assets/logo.png" alt="" />
-  <h1>Todo</h1>
-</div>
+<section class="container">
+  <div class="logo">
+    <img src="../assets/logo.png" alt="" />
+    <h1>Todo</h1>
+  </div>
 
-<form [formGroup]="form" class="form">
-  <input
-    type="text"
-    placeholder="Adicionar uma tarefa"
-    maxlength="60"
-    formControlName="title"
-  />
-  <button class="addBtn" [disabled]="form.invalid" (click)="add()">
-    <mat-icon>add</mat-icon>
-  </button>
-</form>
-<small *ngIf="form.controls.title.invalid && !form.controls.title.pristine"
-  >Este Campo deve conter entre 3 a 60 caracteres</small
->
+  <form [formGroup]="form" class="form">
+    <input
+      type="text"
+      placeholder="Adicionar uma tarefa"
+      maxlength="60"
+      formControlName="title"
+    />
+    <button class="addBtn" [disabled]="form.invalid" (click)="add()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </form>
+  <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine"
+    >Este Campo deve conter entre 3 a 60 caracteres</small
+  >
 
-<p *ngIf="todos.length === 0">
-  <small>Sem tarefas no momento</small>
-</p>
+  <p *ngIf="todos.length === 0">
+    <small>Sem tarefas no momento</small>
+  </p>
 
-<ul class="lista">
-  <li *ngFor="let todo of todos">
-    <p [style.textDecoration]="todo.done ? 'line-through' : 'none'">
-      {{ todo.title }}
-    </p>
-    <div>
-      <button class="doneBtn" *ngIf="!todo.done" (click)="markAsDone(todo)">
-        <mat-icon>done</mat-icon>
-      </button>
-      <button class="replyBtn" *ngIf="todo.done" (click)="markAsUndone(todo)">
-        <mat-icon>redo</mat-icon>
-      </button>
-      <button class="deleteBtn" (click)="remove(todo)">
-        <mat-icon>delete</mat-icon>
-      </button>
-    </div>
-  </li>
-</ul>
+  <ul class="lista">
+    <li *ngFor="let todo of todos">
+      <p [style.textDecoration]="todo.done ? 'line-through' : 'none'">
+        {{ todo.title }}
+      </p>
+      <div>
+        <button class="doneBtn" *ngIf="!todo.done" (click)="markAsDone(todo)">
+          <mat-icon>done</mat-icon>
+        </button>
+        <button class="replyBtn" *ngIf="todo.done" (click)="markAsUndone(todo)">
+          <mat-icon>redo</mat-icon>
+        </button>
+        <button class="deleteBtn" (click)="remove(todo)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </li>
+  </ul>
+</section>
