@@ -1,0 +1,28 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.logo img {
+  max-width: 50px;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+
+.form {
+  max-width: 100%;
+  padding: 1rem 0;
+  display: flex;
+}
+
+.form input {
+  width: 300px;
+  padding: 0.5rem;
+}

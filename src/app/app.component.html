@@ -1,18 +1,20 @@
-<h1>Helow World</h1>
+<div class="logo">
+  <img src="../assets/logo.png" alt="" />
+  <h1>Todo</h1>
+</div>
 
-<form [formGroup]="form">
-  <label>Tarefa</label>
+<form [formGroup]="form" class="form">
   <input
     type="text"
-    placeholder="Digite sua tarefa"
+    placeholder="Adicionar uma tarefa"
     maxlength="60"
     formControlName="title"
   />
-  <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine"
-    >Este Campo deve conter entre 3 a 60 caracteres</small
-  >
   <button [disabled]="form.invalid" (click)="add()">Salvar</button>
 </form>
+<small *ngIf="form.controls.title.invalid && !form.controls.title.pristine"
+  >Este Campo deve conter entre 3 a 60 caracteres</small
+>
 
 <p *ngIf="todos.length === 0">
   <small>Sem tarefas no momento</small>
