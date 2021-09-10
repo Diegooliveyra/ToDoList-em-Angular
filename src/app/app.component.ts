@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Todo } from 'src/models/todo.module';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent {
   public todos: Todo[] = [];
   public form: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private appService: AppService) {
     this.form = this.fb.group({
       title: [
         '',
@@ -44,6 +45,7 @@ export class AppComponent {
     if (index !== -1) {
       this.todos.splice(index, 1);
     }
+    this.appService.showMessage('Excluido com Sucesso!', false);
     this.save();
   }
 

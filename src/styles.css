@@ -10,7 +10,7 @@ body {
   font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 10vh;
 }
 
 html,
@@ -20,11 +20,15 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #333;
 }
 
 .msg-sucess {
   background-color: #28a745;
   color: #fff;
+  position: fixed;
+  top: 10px;
+  right: 10px;
 }
 
 .msg-error {

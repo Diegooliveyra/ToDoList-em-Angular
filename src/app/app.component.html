@@ -10,7 +10,9 @@
     maxlength="60"
     formControlName="title"
   />
-  <button [disabled]="form.invalid" (click)="add()">Salvar</button>
+  <button class="addBtn" [disabled]="form.invalid" (click)="add()">
+    <mat-icon>add</mat-icon>
+  </button>
 </form>
 <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine"
   >Este Campo deve conter entre 3 a 60 caracteres</small
@@ -20,11 +22,19 @@
   <small>Sem tarefas no momento</small>
 </p>
 
-<ul>
+<ul class="lista">
   <li *ngFor="let todo of todos">
-    {{ todo.title }}
-    <button *ngIf="!todo.done" (click)="markAsDone(todo)">Concluir</button>
-    <button *ngIf="todo.done" (click)="markAsUndone(todo)">Rafazer</button>
-    <button (click)="remove(todo)">Remover</button>
+    <p>
+      {{ todo.title }}
+    </p>
+    <div>
+      <button *ngIf="!todo.done" (click)="markAsDone(todo)">
+        <mat-icon>done_outline</mat-icon>
+      </button>
+      <button *ngIf="todo.done" (click)="markAsUndone(todo)">
+        <mat-icon>reply</mat-icon>
+      </button>
+      <button (click)="remove(todo)"><mat-icon>delete</mat-icon></button>
+    </div>
   </li>
 </ul>
