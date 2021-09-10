@@ -55,7 +55,7 @@
 button {
   background: transparent;
   border: 0;
-  margin-left: 1rem;
+
   cursor: pointer;
 }
 
@@ -70,5 +70,18 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+}
+
+.doneBtn {
+  margin-right: 1rem;
+  color: #28a745;
+}
+
+.replyBtn {
+  margin-right: 1rem;
+  color: #ccc;
+}
+
+.deleteBtn {
+  color: #333;
 }

@@ -24,17 +24,19 @@
 
 <ul class="lista">
   <li *ngFor="let todo of todos">
-    <p>
+    <p [style.textDecoration]="todo.done ? 'line-through' : 'none'">
       {{ todo.title }}
     </p>
     <div>
-      <button *ngIf="!todo.done" (click)="markAsDone(todo)">
-        <mat-icon>done_outline</mat-icon>
+      <button class="doneBtn" *ngIf="!todo.done" (click)="markAsDone(todo)">
+        <mat-icon>done</mat-icon>
       </button>
-      <button *ngIf="todo.done" (click)="markAsUndone(todo)">
-        <mat-icon>reply</mat-icon>
+      <button class="replyBtn" *ngIf="todo.done" (click)="markAsUndone(todo)">
+        <mat-icon>redo</mat-icon>
       </button>
-      <button (click)="remove(todo)"><mat-icon>delete</mat-icon></button>
+      <button class="deleteBtn" (click)="remove(todo)">
+        <mat-icon>delete</mat-icon>
+      </button>
     </div>
   </li>
 </ul>
