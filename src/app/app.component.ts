@@ -63,6 +63,8 @@ export class AppComponent {
 
   load() {
     const data = localStorage.getItem('todo') || '';
-    this.todos = JSON.parse(data);
+    if (data.length != 0) {
+      this.todos = JSON.parse(data);
+    }
   }
 }
