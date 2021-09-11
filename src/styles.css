@@ -11,7 +11,7 @@ body {
 
   padding-top: 10vh;
 
-  color: #333;
+  color: #777;
 }
 
 .container {
@@ -26,7 +26,7 @@ body {
 
 .msg-sucess {
   background-color: #28a745;
-  max-width: 100px !important;
+  max-width: 250px !important;
   color: #fff;
   position: fixed;
   top: 40px;
@@ -37,13 +37,3 @@ body {
   background-color: rgb(227, 94, 107);
   color: #fff;
 }
-
-/* .mat-simple-snackbar {
-  display: flex;
-  font-size: 1rem !important;
-  min-height: 20px !important;
-  max-width: 100% !important;
-  width: 250px !important;
-  align-items: center !important;
-  justify-content: center !important;
-} */

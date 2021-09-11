@@ -19,9 +19,9 @@
     >Este Campo deve conter entre 3 a 60 caracteres</small
   >
 
-  <p *ngIf="todos.length === 0">
+  <div class="no-todo" *ngIf="todos.length === 0">
     <small>Sem tarefas no momento</small>
-  </p>
+  </div>
 
   <ul class="lista">
     <li *ngFor="let todo of todos">
