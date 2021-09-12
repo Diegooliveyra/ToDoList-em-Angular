@@ -1,4 +1,4 @@
-# <img src="./src/assets/logo.png" height="25"> Todo Lista em Angular
+# <img src="./src/assets/logo.png" height="25"> Todo List em Angular
 
 ## ℹ️ Sobre o projeto
 
